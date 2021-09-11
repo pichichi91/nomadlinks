@@ -20,14 +20,15 @@ export default function Home({ links, hasMore }) {
 
       <main >
 
-        <div className="container mb-16 mx-auto mt-12 p-4 rounded-4xl border-2 border-green-100	 bg-white shadow-2xl">
+        <div className="container mb-16 mx-auto mt-12 p-4 rounded-3xl border-2 border-green-100	 bg-white shadow-2xl">
 
           <div className="ml-6 mt-8 flex flex-wrap">
 
 
-            {links.map((linkItem) => (<div className="mx-2 mb-16" key={linkItem.id}>
-
+            {links.map((linkItem) => (<div className="mx-4 lg:mx-6 mb-16" key={linkItem.id}>
+              <div className="w-80">
               <a target="_blank" href={linkItem.url} rel="noopener noreferrer">
+
                 <Image
                   className="opacity-70 hover:opacity-100 transition-opacity  duration-300 ease-in-out		 rounded-xl object-cover"
                   width={350}
@@ -37,8 +38,10 @@ export default function Home({ links, hasMore }) {
                   blurDataURL={defaultImage}
                   placeholder="blur"
                 />
+
               </a>
 
+              </div>
 
 
               <h2 className="font-roboto my-2 text-2xl text-green-800 font-black">{linkItem.name}</h2>
