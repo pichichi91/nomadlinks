@@ -1,10 +1,6 @@
 import Head from 'next/head'
 import { getDatabase } from '../lib/notion';
 import Image from 'next/image'
-import Link from 'next/link'
-
-
-
 
 export default function Home({ links, hasMore }) {
 
@@ -45,7 +41,7 @@ export default function Home({ links, hasMore }) {
 
 
 
-              <h2 className="font-bold	 font-roboto my-2 text-2xl text-green-800 font-black">{linkItem.name}</h2>
+              <h2 className="font-roboto my-2 text-2xl text-green-800 font-black">{linkItem.name}</h2>
 
 
             </div>))}
